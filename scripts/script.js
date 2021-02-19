@@ -41,4 +41,7 @@ console.log(text);
 
 let x = 0.2 + 0.1;
 
-// alert(x);
+function myFunction() {
+    document.getElementById("spew").innerHTML = x;
+    document.getElementById("spew").style.visibility = "visible";
+}

@@ -15,11 +15,25 @@
     <link href="styles\style.css" rel="stylesheet">
 </head>
 
-<body>
-    <section>
+<body class="flex-col">
+    <section id="hello-world">
         <button class="btn btn-primary" onclick="myFunction()">Click me</button>
-        <p id="spew">spew</p>
     </section>
+    <section id="arithmetic">
+        <div class="grid-row" id="inputs">
+            <input type="number" id="num1">
+            <input type="number" id="num2">
+        </div>
+        <button class="btn btn-primary" onclick="add()">+</button>
+        <button class="btn btn-primary" onclick="subtract()">-</button>
+        <button class="btn btn-primary" onclick="multiply()">*</button>
+        <button class="btn btn-primary" onclick="exponent()">^</button>
+        <button class="btn btn-primary" onclick="divide()">/</button>
+        <button class="btn btn-primary" onclick="mod()">%</button>
+        <button class="btn btn-primary" onclick="increment()">++</button>
+        <button class="btn btn-primary" onclick="decrement()">--</button>
+    </section>
+    <h1 id="spew"></h1>
 
     <!-- --------------------------------JS BELOW--------------------------------------------- -->
 

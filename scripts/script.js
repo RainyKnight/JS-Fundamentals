@@ -50,7 +50,7 @@ let c = 5 * 7;
 console.log(c);
 
 // exponentiation
-let d = 5 ^ 7;
+let d = 5 ** 7;
 console.log(d);
 
 // division

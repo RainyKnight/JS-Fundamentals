@@ -37,9 +37,40 @@ For example:
 
 let text = "Hello World";
 
+// addition
+let a = 5 + 7;
+console.log(a);
+
+// subtraction
+let b = 5 - 7;
+console.log(b);
+
+// multiplication
+let c = 5 * 7;
+console.log(c);
+
+// exponentiation
+let d = 5 ^ 7;
+console.log(d);
+
+// division
+let e = 5 / 7;
+console.log(e);
+
+// modulation
+let f = 5 % 7;
+console.log(f);
+
+// increment
+f++;
+console.log(f);
+
+// decrement
+f--;
+console.log(f);
+
 console.log(text);
 
-let x = 0.2 + 0.1;
 
 function myFunction() {
     document.getElementById("spew").innerHTML = text;

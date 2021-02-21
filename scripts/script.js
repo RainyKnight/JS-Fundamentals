@@ -71,8 +71,17 @@ console.log(f);
 
 console.log(text);
 
+let num1;
+let num2;
 
 function myFunction() {
-    document.getElementById("spew").innerHTML = text;
+
+    store();
+    console.log(`${num1},${num2}`);
     document.getElementById("spew").style.visibility = "visible";
+}
+
+function store() {
+    num1 = document.getElementById("num1").value;
+    num2 = document.getElementById("num2").value;
 }

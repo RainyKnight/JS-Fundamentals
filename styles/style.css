@@ -13,14 +13,6 @@ body {
     justify-items: center;
 }
 
-#num1 {
-    float: right;
-}
-
-#num2 {
-    float: left;
-}
-
 section {
     display: flex;
     flex-direction: column;

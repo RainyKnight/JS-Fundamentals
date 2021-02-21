@@ -50,11 +50,16 @@ function store() {
 
 function hide() {
     document.getElementById("spew").style.visibility = "hidden";
-    document.getElementsByClassName("hidden").style.visibility = "hidden";
+    document.getElementById("increment").style.visibility = "hidden";
+    document.getElementById("decrement").style.visibility = "hidden";
+    document.getElementById("clearBtn").style.visibility = "hidden";
 }
 
 function show() {
-    document.getElementsByClassName("hidden").style.visibility = "hidden";
+    document.getElementById("spew").style.visibility = "visible";
+    document.getElementById("increment").style.visibility = "visible";
+    document.getElementById("decrement").style.visibility = "visible";
+    document.getElementById("clearBtn").style.visibility = "visible";
 }
 
 // function validate() {
@@ -64,6 +69,7 @@ function show() {
 // }
 
 function print() {
+    console.log(result);
     document.getElementById("spew").innerHTML = result;
 
     // show the result and hidden elements
@@ -74,8 +80,8 @@ function print() {
 
 function add() {
     store();
-    // validate();
-    result = num1 + num2;
+    //  unary plus to keep from concatenating strings
+    result = +num1 + +num2;
     print();
 }
 
@@ -129,8 +135,13 @@ function decrement() {
 
 
 
-function clear() {
-    result = null;
+function clearElements() {
+    result = 0;
+    num1 = 0;
+    num2 = 0;
+    document.getElementById("num1").value = null;
+    document.getElementById("num2").value = null;
+    print();
     hide();
 }
 

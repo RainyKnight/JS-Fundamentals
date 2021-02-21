@@ -39,10 +39,8 @@ let num1;
 let num2;
 let result = null;
 
-function print() {
-    document.getElementById("spew").innerHTML = result;
-    document.getElementById("spew").style.visibility = "visible";
-}
+
+// ------------------------------------------------------------------------------------------------
 
 function store() {
     num1 = document.getElementById("num1").value;
@@ -50,8 +48,33 @@ function store() {
     console.log(`${num1},${num2}`);
 }
 
+function hide() {
+    document.getElementById("spew").style.visibility = "hidden";
+    document.getElementsByClassName("hidden").style.visibility = "hidden";
+}
+
+function show() {
+    document.getElementsByClassName("hidden").style.visibility = "hidden";
+}
+
+// function validate() {
+//     if (num1 == null || num2 == null) {
+//         break;
+//     }
+// }
+
+function print() {
+    document.getElementById("spew").innerHTML = result;
+
+    // show the result and hidden elements
+    show();
+}
+
+// ------------------------------------------------------------------------------------------------
+
 function add() {
     store();
+    // validate();
     result = num1 + num2;
     print();
 }
@@ -92,6 +115,8 @@ function divide() {
     print();
 }
 
+
+
 function increment() {
     result++;
     print();
@@ -100,5 +125,12 @@ function increment() {
 function decrement() {
     result--;
     print();
+}
+
+
+
+function clear() {
+    result = null;
+    hide();
 }
 

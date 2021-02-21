@@ -35,53 +35,60 @@ For example:
 
 */
 
-let text = "Hello World";
-
-// addition
-let a = 5 + 7;
-console.log(a);
-
-// subtraction
-let b = 5 - 7;
-console.log(b);
-
-// multiplication
-let c = 5 * 7;
-console.log(c);
-
-// exponentiation
-let d = 5 ** 7;
-console.log(d);
-
-// division
-let e = 5 / 7;
-console.log(e);
-
-// modulation
-let f = 5 % 7;
-console.log(f);
-
-// increment
-f++;
-console.log(f);
-
-// decrement
-f--;
-console.log(f);
-
-console.log(text);
-
 let num1;
 let num2;
+let result;
 
-function myFunction() {
-
-    store();
-    console.log(`${num1},${num2}`);
+function print() {
+    document.getElementById("spew").innerHTML = result;
     document.getElementById("spew").style.visibility = "visible";
 }
 
 function store() {
     num1 = document.getElementById("num1").value;
     num2 = document.getElementById("num2").value;
+    console.log(`${num1},${num2}`);
 }
+
+function add() {
+    store();
+    result = num1 + num2;
+    print();
+}
+
+function subtract() {
+    store();
+    result = num1 - num2;
+    print();
+}
+
+function multiply() {
+    store();
+    result = num1 * num2;
+    print();
+}
+
+function exponent() {
+    store();
+    result = num1 ** num2;
+    print();
+}
+
+function divide() {
+    store();
+    result = num1 / num2;
+    print();
+}
+
+function mod() {
+    store();
+    result = num1 % num2;
+    print();
+}
+
+function divide() {
+    store();
+    result = num1 / num2;
+    print();
+}
+

@@ -37,7 +37,7 @@ For example:
 
 let num1;
 let num2;
-let result;
+let result = null;
 
 function print() {
     document.getElementById("spew").innerHTML = result;
@@ -89,6 +89,16 @@ function mod() {
 function divide() {
     store();
     result = num1 / num2;
+    print();
+}
+
+function increment() {
+    result++;
+    print();
+}
+
+function decrement() {
+    result--;
     print();
 }
 

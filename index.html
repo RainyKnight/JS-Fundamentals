@@ -27,12 +27,14 @@
         <button class="btn btn-primary" onclick="exponent()">Exponentiation (**)</button>
         <button class="btn btn-primary" onclick="divide()">Division (/)</button>
         <button class="btn btn-primary" onclick="mod()">Modulus (%)</button>
-        <br>
-        <button class="btn btn-primary hidden" onclick="increment()" id="increment">Increment (++)</button>
-        <button class="btn btn-primary hidden" onclick="decrement()" id="decrement">Decrement (--)</button>
     </section>
     <h1 id="spew">null</h1>
     <section>
+        <div class="grid-row">
+            <button class="btn btn-primary hidden" onclick="decrement()" id="decrement">Decrement (--)</button>
+            <button class="btn btn-primary hidden" onclick="increment()" id="increment">Increment (++)</button>
+        </div>
+
         <button class="btn btn-danger hidden" onclick="clearElements()" id="clearBtn">Clear</button>
     </section>
 
@@ -53,9 +55,7 @@
 
 <!-- TODO -->
 <!-- 
-    
-* 
-    
+        
 * 
     
 * 

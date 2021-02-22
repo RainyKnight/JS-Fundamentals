@@ -35,8 +35,8 @@ For example:
 
 */
 
-let num1;
-let num2;
+let num1 = null;
+let num2 = null;
 let result = null;
 
 
@@ -46,6 +46,7 @@ function store() {
     num1 = document.getElementById("num1").value;
     num2 = document.getElementById("num2").value;
     console.log(`${num1},${num2}`);
+    validate();
 }
 
 function hide() {
@@ -65,9 +66,10 @@ function show() {
 function print() {
     console.log(result);
     document.getElementById("spew").innerHTML = result;
-
-    // show the result and hidden elements
-    show();
+    if (validate() == true) {
+        // show the result and hidden elements
+        show();
+    }
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -137,4 +139,11 @@ function clearElements() {
     document.getElementById("num2").value = null;
     print();
     hide();
+}
+
+// Check for input
+function validate() {
+    if (num1 && num2) {
+        return true;
+    }
 }

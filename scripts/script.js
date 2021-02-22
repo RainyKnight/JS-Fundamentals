@@ -62,12 +62,6 @@ function show() {
     document.getElementById("clearBtn").style.visibility = "visible";
 }
 
-// function validate() {
-//     if (num1 == null || num2 == null) {
-//         break;
-//     }
-// }
-
 function print() {
     console.log(result);
     document.getElementById("spew").innerHTML = result;
@@ -80,7 +74,7 @@ function print() {
 
 function add() {
     store();
-    //  unary plus to keep from concatenating strings
+    //  unary plus to keep from concatenating strings with addition
     result = +num1 + +num2;
     print();
 }
@@ -144,4 +138,3 @@ function clearElements() {
     print();
     hide();
 }
-

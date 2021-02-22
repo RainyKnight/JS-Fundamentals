@@ -54,6 +54,8 @@ function hide() {
     document.getElementById("increment").style.visibility = "hidden";
     document.getElementById("decrement").style.visibility = "hidden";
     document.getElementById("clearBtn").style.visibility = "hidden";
+    // Look into query selector for easy class selection
+    // Otherwise I need to mess with HTMLCollection array stuff
 }
 
 function show() {

@@ -34,8 +34,9 @@ button {
 }
 
 h1 {
+    word-wrap: break-word;
     visibility: hidden;
-    margin-top: 1rem;
+    margin: 1rem 1rem 0 1rem;
     text-align: center;
 }
 

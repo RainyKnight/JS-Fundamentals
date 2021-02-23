@@ -149,3 +149,31 @@ function validate() {
         return true;
     }
 }
+
+
+// ------------------------------------------------------------------------------------------------
+// The Odin Project js fundamentals Part 1
+
+let a = 10;
+let b = 7 * a;
+const max = 57;
+let actual = max - 13;
+let percentage = actual / max;
+
+console.log(23 + 97);
+
+console.log(5 + 1 + 4 + 94 + 43 + 15);
+
+console.log((4 + 6 + 9) / 77);
+
+console.log(a);
+
+console.log(9 * a);
+
+console.log(b);
+
+console.log(`max= ${max}`);
+
+console.log(`actual= ${actual}`);
+
+console.log(`actual= ${percentage}`);

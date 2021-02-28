@@ -213,9 +213,23 @@ console.log(joined);
 
 // NOTE: When a string is enclosed in quotes, it is known as a 'string literal'
 
+// ------------------------
 // Numbers vs. Strings
+// ------------------------
 let nums = 234;
 string = 'nifty';
 console.log(nums + string);
 console.log(typeof nums);
 console.log(typeof string);
+
+// Converting to a number
+nums = '2354';
+console.log('Before Number() = ' + typeof nums);
+nums = Number(nums);
+console.log('After Number() = ' + typeof nums);
+
+// Converting to a string
+nums = 2354;
+console.log('Before toString() = ' + typeof nums);
+nums = toString(nums);
+console.log('After toString() = ' + typeof nums);

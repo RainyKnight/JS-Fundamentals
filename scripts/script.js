@@ -154,26 +154,68 @@ function validate() {
 // ------------------------------------------------------------------------------------------------
 // The Odin Project js fundamentals Part 1
 
-let a = 10;
-let b = 7 * a;
-const max = 57;
-let actual = max - 13;
-let percentage = actual / max;
+// let a = 10;
+// let b = 7 * a;
+// const max = 57;
+// let actual = max - 13;
+// let percentage = actual / max;
 
-console.log(23 + 97);
+// console.log(23 + 97);
 
-console.log(5 + 1 + 4 + 94 + 43 + 15);
+// console.log(5 + 1 + 4 + 94 + 43 + 15);
 
-console.log((4 + 6 + 9) / 77);
+// console.log((4 + 6 + 9) / 77);
 
-console.log(a);
+// console.log(a);
 
-console.log(9 * a);
+// console.log(9 * a);
 
-console.log(b);
+// console.log(b);
 
-console.log(`max= ${max}`);
+// console.log(`max= ${max}`);
 
-console.log(`actual= ${actual}`);
+// console.log(`actual= ${actual}`);
 
-console.log(`actual= ${percentage}`);
+// console.log(`actual= ${percentage}`);
+
+
+// ------------------------------------------------------------------------------------------------
+// The Odin Project js fundamentals Part 2
+
+let string = 'Blah blah blah';
+console.log(string);
+
+// Examples of string parse errors
+// let badString1 = This is a test;
+// let badString2 = 'This is a test;
+// let badString3 = This is a test';
+
+let badString = string;
+console.log(badString);
+
+// ------------------------
+// Quotes in quotes
+// ------------------------
+// Problem: Quote within a string
+// let bigmouth = 'I've got no right to take my place...';
+
+// Solution: escape the quotation with a \
+let bigmouth = 'I\'ve got no right to take my place...';
+console.log(bigmouth);
+
+// ------------------------
+// Concatenating Strings
+// ------------------------
+let wordOne = 'Hello ';
+let wordTwo = 'my ';
+let joined = wordOne + wordTwo + 'friend.';
+console.log(joined);
+
+// NOTE: When a string is enclosed in quotes, it is known as a 'string literal'
+
+// Numbers vs. Strings
+let nums = 234;
+string = 'nifty';
+console.log(nums + string);
+console.log(typeof nums);
+console.log(typeof string);

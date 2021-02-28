@@ -217,10 +217,10 @@ console.log(joined);
 // Numbers vs. Strings
 // ------------------------
 let nums = 234;
-string = 'nifty';
-console.log(nums + string);
+let stringLiteral = 'nifty';
+console.log(nums + stringLiteral);
 console.log(typeof nums);
-console.log(typeof string);
+console.log(typeof stringLiteral);
 
 // Converting to a number
 nums = '2354';
@@ -233,3 +233,14 @@ nums = 2354;
 console.log('Before toString() = ' + typeof nums);
 nums = toString(nums);
 console.log('After toString() = ' + typeof nums);
+
+// ------------------------
+// Template Literals
+// ------------------------
+let catName = 'Honey';
+let templateLiteral = `I really like my cat. 
+${catName} is super sweet and fluffy!`;
+console.log(templateLiteral);
+
+// placeholder - ${}
+// new line character - \n

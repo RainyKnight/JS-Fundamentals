@@ -378,5 +378,57 @@ console.log(text);
 // --------------------------------------------------
 // String Trim
 // --------------------------------------------------
+console.log("\n--String Trim--");
 
 // Removes whitespace
+string = `               Hello World                  `;
+console.log(string);
+let trim = string.trim();
+console.log(trim);
+
+// --------------------------------------------------
+// String Padding
+// --------------------------------------------------
+console.log("\n--String Padding--");
+
+// Adds to the string
+string = 'Hello';
+console.log(string);
+string = string.padStart(30, '+o');
+console.log(string);
+
+string = 'Hello';
+console.log(string);
+string = string.padEnd(30, '+o');
+console.log(string);
+
+// --------------------------------------------------
+// Extracting String Characters
+// --------------------------------------------------
+console.log("\n--Extracting String Characters--");
+
+// ------------------------
+// charAt(position)
+// charAt returns the specified position in the string
+string = 'Hello World';
+console.log(string);
+let char = string.charAt(6);
+console.log(char);
+
+// ------------------------
+// charCodeAt(position)
+// charAt returns the unicode of the specified position in the string
+string = 'Hello World';
+console.log(string);
+char = string.charCodeAt(6);
+console.log(char);
+
+// ------------------------
+// Property Access
+// charAt returns the specified position in the string
+// NOTE: Strings are still not arrays!!!
+string = 'Hello World';
+console.log(string);
+char = string[6];
+console.log(char);
+// NOTE: This method is read only and cannot edit the actual string

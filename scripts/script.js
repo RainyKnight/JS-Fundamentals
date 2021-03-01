@@ -314,8 +314,8 @@ console.log(slice);
 // NOTE: CANNOT ACCEPT NEGATIVE VALUES
 string = "Holy cannoli kiwis sure are hairy!";
 console.log(string);
-let substring = string.substring(13, 18);
-console.log(substring);
+let subString = string.substring(13, 18);
+console.log(subString);
 
 // ------------------------
 // substr(start, end);
@@ -325,3 +325,28 @@ string = `When the moon hits your eye like a big pizza pie, that's amore.`;
 console.log(string);
 let substr = string.substr(9, 4);
 console.log(substr);
+
+// --------------------------------------------------
+// Replacing String Content
+// --------------------------------------------------
+
+// replace(target, replacement);
+// NOTE: CASE SENSITIVE
+// NOTE: RETURNS THE FIRST MATCH
+string = `Blue is my favorite color! Just like the nice, blue, sky!`;
+console.log(string);
+let newString = string.replace('blue', 'red');
+console.log(newString);
+
+// To make it case insensitive, use the following regular expression - /i
+newString = string.replace(/blue/i, 'Red');
+console.log(newString);
+
+// To replace all occurrences, use the following regular expression - /g
+newString = string.replace(/blue/g, 'red');
+console.log(newString);
+// NOTE: Regular expressions can be stacked like terminal commands
+
+// --------------------------------------------------
+// Replacing String Content
+// --------------------------------------------------

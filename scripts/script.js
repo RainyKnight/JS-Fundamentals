@@ -432,3 +432,18 @@ console.log(string);
 char = string[6];
 console.log(char);
 // NOTE: This method is read only and cannot edit the actual string
+
+// --------------------------------------------------
+// Converting a String to an Array
+// --------------------------------------------------
+console.log("\n--Converting a String to an Array--");
+
+// split()
+
+string = 'My cat has a massive amount of floof';
+console.log(string);
+string.split(" ");
+
+for (let i = 0; i < string.length; i++) {
+    console.log(string[i]);
+}

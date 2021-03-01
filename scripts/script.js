@@ -348,5 +348,21 @@ console.log(newString);
 // NOTE: Regular expressions can be stacked like terminal commands
 
 // --------------------------------------------------
-// Replacing String Content
+// Converting to Upper or Lower Case
 // --------------------------------------------------
+
+// toUpperCase() or toLowerCase()
+string = `Hello my name is Lucas!`;
+console.log(`Original: ${string}`);
+let upper = string.toUpperCase();
+console.log(`UpperCase: ${upper}`);
+let lower = string.toLowerCase();
+console.log(`LowerCase: ${lower}`);
+
+// --------------------------------------------------
+// String Concatenation
+// --------------------------------------------------
+
+// concat() combines the strings like the + operator
+var text = "Hello" + " " + "World!";
+var text = "Hello".concat(" ", "World!");

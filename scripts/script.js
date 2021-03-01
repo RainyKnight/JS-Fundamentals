@@ -244,3 +244,44 @@ console.log(templateLiteral);
 
 // placeholder - ${}
 // new line character - \n
+
+// ---------------------------------------------------------------------
+// String Methods and Properties
+// ---------------------------------------------------------------------
+
+// .length
+let txt = 'asdasdasdasdasdasda';
+console.log(txt);
+let length = txt.length;
+console.log(`The above statement is ${length} characters long.`);
+
+// ------------------------
+// Finding a string within a string
+// ------------------------
+
+// ------------------------
+// indexOf('string', starting position);
+// searches going right
+string = `You know what I love? Apples. They're so crunchy and delicious!`;
+console.log(string);
+let word = string.indexOf('Apple');
+console.log(`\The word \"Apple\" found starting at position: ${word}`);
+
+// ------------------------
+// lastIndexOf('string', starting position);
+// searches going left
+string = `Boy I sure do love apples. 
+Apples are my favorite fruit and I don't know what I'd do without them. 
+You know what they say 
+\"an apple a day keeps the doctor away.\"`;
+console.log(string);
+word = string.lastIndexOf(`apple`);
+console.log(`\The word \"Apple\" last found starting at position: ${word}`);
+
+// ------------------------
+// search('string');
+// searches going left
+string = `Boy oh boy, today sure is going to be a great day!`;
+console.log(string);
+word = string.search('boy');
+console.log(`\The word \"boy\" found starting at position: ${word}`);

@@ -245,9 +245,9 @@ console.log(templateLiteral);
 // placeholder - ${}
 // new line character - \n
 
-// ---------------------------------------------------------------------
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // String Methods and Properties
-// ---------------------------------------------------------------------
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // .length
 let txt = 'asdasdasdasdasdasda';
@@ -255,9 +255,9 @@ console.log(txt);
 let length = txt.length;
 console.log(`The above statement is ${length} characters long.`);
 
-// ------------------------
+// --------------------------------------------------
 // Finding a string within a string
-// ------------------------
+// --------------------------------------------------
 
 // ------------------------
 // indexOf('string', starting position);
@@ -285,3 +285,43 @@ string = `Boy oh boy, today sure is going to be a great day!`;
 console.log(string);
 word = string.search('boy');
 console.log(`\The word \"boy\" found starting at position: ${word}`);
+
+// --------------------------------------------------
+// Extracting string parts
+// --------------------------------------------------
+
+// ------------------------
+// slice(start, end);
+// Creates a new string from the specified values
+// Real life example: clipboard feature
+string = "Howdy dowdy water sure is important!";
+console.log(string);
+
+let slice = string.slice(12, 36);
+console.log(slice);
+
+// positive values count spaces from the left
+slice = string.slice(12);
+console.log(slice);
+
+// negative values count spaces from the right
+slice = string.slice(-24);
+console.log(slice);
+
+// ------------------------
+// substring(start, end);
+// Creates a new string from the specified values
+// NOTE: CANNOT ACCEPT NEGATIVE VALUES
+string = "Holy cannoli kiwis sure are hairy!";
+console.log(string);
+let substring = string.substring(13, 18);
+console.log(substring);
+
+// ------------------------
+// substr(start, end);
+// Creates a new string from the specified values
+// NOTE: THE SECOND PARAMETER DENOTES LENGTH OF SLICE, NOT POSITION
+string = `When the moon hits your eye like a big pizza pie, that's amore.`;
+console.log(string);
+let substr = string.substr(9, 4);
+console.log(substr);

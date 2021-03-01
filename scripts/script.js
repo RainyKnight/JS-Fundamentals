@@ -248,6 +248,7 @@ console.log(templateLiteral);
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // String Methods and Properties
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+console.log("\n\n--String Methods and Properties--".toUpperCase());
 
 // .length
 let txt = 'asdasdasdasdasdasda';
@@ -258,6 +259,7 @@ console.log(`The above statement is ${length} characters long.`);
 // --------------------------------------------------
 // Finding a string within a string
 // --------------------------------------------------
+console.log("\n--Finding a string within a string--");
 
 // ------------------------
 // indexOf('string', starting position);
@@ -289,6 +291,7 @@ console.log(`\The word \"boy\" found starting at position: ${word}`);
 // --------------------------------------------------
 // Extracting string parts
 // --------------------------------------------------
+console.log("\n--Extracting string parts--");
 
 // ------------------------
 // slice(start, end);
@@ -329,6 +332,7 @@ console.log(substr);
 // --------------------------------------------------
 // Replacing String Content
 // --------------------------------------------------
+console.log("\n--Replacing String Content--");
 
 // replace(target, replacement);
 // NOTE: CASE SENSITIVE
@@ -350,6 +354,7 @@ console.log(newString);
 // --------------------------------------------------
 // Converting to Upper or Lower Case
 // --------------------------------------------------
+console.log("\n--Converting to Upper or Lower Case--");
 
 // toUpperCase() or toLowerCase()
 string = `Hello my name is Lucas!`;
@@ -362,7 +367,16 @@ console.log(`LowerCase: ${lower}`);
 // --------------------------------------------------
 // String Concatenation
 // --------------------------------------------------
+console.log("\n--String Concatenation--");
 
 // concat() combines the strings like the + operator
-var text = "Hello" + " " + "World!";
-var text = "Hello".concat(" ", "World!");
+let text = "Hello" + " " + "World!";
+console.log(text);
+text = "Hello".concat(" ", "World", "!");
+console.log(text);
+
+// --------------------------------------------------
+// String Trim
+// --------------------------------------------------
+
+// Removes whitespace

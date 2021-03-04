@@ -451,6 +451,7 @@ for (let i = 0; i < string.length; i++) {
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // If Else Statements
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+console.log("\n--If Else Statements--");
 
 let date = new Date();
 let timePeriod;
@@ -470,3 +471,36 @@ else {
 }
 
 console.log(`Current time is ${date.getHours()}:${date.getMinutes()} ${timePeriod}`);
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Logical Operators
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+console.log("\n--Logical Operators--");
+
+a = 5;
+b = -2;
+c = 87;
+
+let value1, value2, value3;
+
+// --------------------------------------------------
+// or - ||
+// --------------------------------------------------
+
+if (a < 6 || b >= 2) {
+    console.log('howdy do');
+    // result ends up being true || false
+    // since there's at least one condition true, it returns the log
+}
+
+console.log(true || true);
+console.log(false || true);
+
+// true = 1
+// false = 0
+console.log(true || false);
+console.log(1 || 0);
+
+console.log(false || false);
+
+result = value1 || value2 || value3;

@@ -504,3 +504,18 @@ console.log(1 || 0);
 console.log(false || false);
 
 result = value1 || value2 || value3;
+// in the above example, it will return the first truthy variable going left to right
+// if none are found, it will return the final variable in the chain
+
+// For example:
+console.log(null || 0 || 1); // 1 is returned because 1 = true
+
+let firstName = "";
+let lastName = "";
+let nickName = "SuperCoder";
+
+alert(firstName || lastName || nickName || "Anonymous"); // SuperCoder
+// If all fields above are empty, it defaults to "Anonymous"
+
+true || alert("not printed");
+false || alert("printed");

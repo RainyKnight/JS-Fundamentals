@@ -527,7 +527,7 @@ false || console.log("printed");
 console.log("\n\n-AND - &&-");
 
 result = a && b;
-console.log(result);
+console.log(result); // b = -2
 
 // returns false if ANY are false
 console.log(true && true);   // true
@@ -538,3 +538,24 @@ console.log(false && false); // false
 result = 0 && null && 1;
 console.log(`First falsy: ${result}`);
 // in the above example, it will return the first FALSY variable going left to right
+
+// && takes higher precedence than ||
+console.log(0 || 1 && null); // null
+// 0 || 1 && null
+// 0 || (1 && null)
+// 0 || (true && null)
+// null
+
+// --------------------------------------------------
+// NOT !
+// --------------------------------------------------
+console.log("\n\n-NOT - !-");
+
+// Converts to boolean then flips the boolean value
+
+console.log(5);
+console.log(!5); // false
+// !! is sometimes used to convert a value to boolean while maintaining the same value
+console.log(!!5); // true
+
+alert(alert(1) || 2 || alert(3));

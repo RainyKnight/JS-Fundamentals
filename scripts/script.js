@@ -484,7 +484,7 @@ c = 87;
 let value1, value2, value3;
 
 // --------------------------------------------------
-// or - ||
+// OR ||
 // --------------------------------------------------
 
 if (a < 6 || b >= 2) {
@@ -514,8 +514,21 @@ let firstName = "";
 let lastName = "";
 let nickName = "SuperCoder";
 
-alert(firstName || lastName || nickName || "Anonymous"); // SuperCoder
+console.log(firstName || lastName || nickName || "Anonymous"); // SuperCoder
 // If all fields above are empty, it defaults to "Anonymous"
 
-true || alert("not printed");
-false || alert("printed");
+true || console.log("not printed");
+false || console.log("printed");
+
+
+// --------------------------------------------------
+// AND &&
+// --------------------------------------------------
+
+result = a && b;
+console.log(result);
+
+console.log(true && true);   // true
+console.log(false && true);  // false
+console.log(true && false);  // false
+console.log(false && false); // false

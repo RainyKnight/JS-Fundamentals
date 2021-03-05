@@ -243,12 +243,12 @@ ${catName} is super sweet and fluffy!`;
 console.log(templateLiteral);
 
 // placeholder - ${}
-// new line character - \n
+// new line character - \n\n
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // String Methods and Properties
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-console.log("\n\n--String Methods and Properties--".toUpperCase());
+console.log("\n\n\n\n--String Methods and Properties--".toUpperCase());
 
 // .length
 let txt = 'asdasdasdasdasdasda';
@@ -259,7 +259,7 @@ console.log(`The above statement is ${length} characters long.`);
 // --------------------------------------------------
 // Finding a string within a string
 // --------------------------------------------------
-console.log("\n--Finding a string within a string--");
+console.log("\n\n--Finding a string within a string--");
 
 // ------------------------
 // indexOf('string', starting position);
@@ -291,7 +291,7 @@ console.log(`\The word \"boy\" found starting at position: ${word}`);
 // --------------------------------------------------
 // Extracting string parts
 // --------------------------------------------------
-console.log("\n--Extracting string parts--");
+console.log("\n\n--Extracting string parts--");
 
 // ------------------------
 // slice(start, end);
@@ -332,7 +332,7 @@ console.log(substr);
 // --------------------------------------------------
 // Replacing String Content
 // --------------------------------------------------
-console.log("\n--Replacing String Content--");
+console.log("\n\n--Replacing String Content--");
 
 // replace(target, replacement);
 // NOTE: CASE SENSITIVE
@@ -354,7 +354,7 @@ console.log(newString);
 // --------------------------------------------------
 // Converting to Upper or Lower Case
 // --------------------------------------------------
-console.log("\n--Converting to Upper or Lower Case--");
+console.log("\n\n--Converting to Upper or Lower Case--");
 
 // toUpperCase() or toLowerCase()
 string = `Hello my name is Lucas!`;
@@ -367,7 +367,7 @@ console.log(`LowerCase: ${lower}`);
 // --------------------------------------------------
 // String Concatenation
 // --------------------------------------------------
-console.log("\n--String Concatenation--");
+console.log("\n\n--String Concatenation--");
 
 // concat() combines the strings like the + operator
 let text = "Hello" + " " + "World!";
@@ -378,7 +378,7 @@ console.log(text);
 // --------------------------------------------------
 // String Trim
 // --------------------------------------------------
-console.log("\n--String Trim--");
+console.log("\n\n--String Trim--");
 
 // Removes whitespace
 string = `               Hello World                  `;
@@ -389,7 +389,7 @@ console.log(trim);
 // --------------------------------------------------
 // String Padding
 // --------------------------------------------------
-console.log("\n--String Padding--");
+console.log("\n\n--String Padding--");
 
 // Adds to the string
 string = 'Hello';
@@ -405,7 +405,7 @@ console.log(string);
 // --------------------------------------------------
 // Extracting String Characters
 // --------------------------------------------------
-console.log("\n--Extracting String Characters--");
+console.log("\n\n--Extracting String Characters--");
 
 // ------------------------
 // charAt(position)
@@ -436,7 +436,7 @@ console.log(char);
 // --------------------------------------------------
 // Converting a String to an Array
 // --------------------------------------------------
-console.log("\n--Converting a String to an Array--");
+console.log("\n\n--Converting a String to an Array--");
 
 // split()
 
@@ -451,7 +451,7 @@ for (let i = 0; i < string.length; i++) {
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // If Else Statements
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-console.log("\n--If Else Statements--");
+console.log("\n\n--If Else Statements--");
 
 let date = new Date();
 let timePeriod;
@@ -475,17 +475,16 @@ console.log(`Current time is ${date.getHours()}:${date.getMinutes()} ${timePerio
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // Logical Operators
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-console.log("\n--Logical Operators--");
+console.log("\n\n--Logical Operators--");
 
 a = 5;
 b = -2;
 c = 87;
 
-let value1, value2, value3;
-
 // --------------------------------------------------
 // OR ||
 // --------------------------------------------------
+console.log("\n\n-OR - ||-");
 
 if (a < 6 || b >= 2) {
     console.log('howdy do');
@@ -503,8 +502,9 @@ console.log(1 || 0);
 
 console.log(false || false);
 
-result = value1 || value2 || value3;
-// in the above example, it will return the first truthy variable going left to right
+result = 0 || null || 1;
+console.log(`First truthy: ${result}`);
+// in the above example, it will return the first TRUTHY variable going left to right
 // if none are found, it will return the final variable in the chain
 
 // For example:
@@ -524,11 +524,17 @@ false || console.log("printed");
 // --------------------------------------------------
 // AND &&
 // --------------------------------------------------
+console.log("\n\n-AND - &&-");
 
 result = a && b;
 console.log(result);
 
+// returns false if ANY are false
 console.log(true && true);   // true
 console.log(false && true);  // false
 console.log(true && false);  // false
 console.log(false && false); // false
+
+result = 0 && null && 1;
+console.log(`First falsy: ${result}`);
+// in the above example, it will return the first FALSY variable going left to right

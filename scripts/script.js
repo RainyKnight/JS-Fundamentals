@@ -587,3 +587,37 @@ if (age <= 14 || age >= 90) {
 if (-1 || 0) console.log('first'); // -1 is returned as true. If statement does execute
 if (-1 && 0) console.log('second'); // 0 is returned as false. If statement does NOT execute
 if (null || -1 && 1) console.log('third'); // -1 && 1 is returned as true. If statement does execute
+
+
+// --------------------------------------------------
+// Check the Login Practice
+// --------------------------------------------------
+console.log("\n\n-Check the Login Practice-");
+
+// uncomment to run the practice
+// loginPractice();
+
+function loginPractice() {
+    let username, password;
+
+    username = prompt('Who\'s there?');
+
+    if (username == 'Admin') {
+        password = prompt('Password:');
+        if (password == 'TheMaster') {
+            alert('Welcome!');
+        }
+        else if (password == '' || password == null) {
+            alert('Canceled');
+        }
+        else {
+            alert('I don\'t know you');
+        }
+    }
+    else if (username == '' || username == null) {
+        alert('Canceled');
+    }
+    else {
+        alert('I don\'t know you');
+    }
+}

@@ -546,6 +546,9 @@ console.log(0 || 1 && null); // null
 // 0 || (true && null)
 // null
 
+console.log(null || 2 && 3 || 4); // 3, furthest right
+
+
 // --------------------------------------------------
 // NOT !
 // --------------------------------------------------
@@ -558,4 +561,29 @@ console.log(!5); // false
 // !! is sometimes used to convert a value to boolean while maintaining the same value
 console.log(!!5); // true
 
-alert(alert(1) || 2 || alert(3));
+
+// --------------------------------------------------
+// Operator Practice
+// --------------------------------------------------
+console.log("\n\n-Operator Practice-");
+
+let age = 13;
+
+
+if (age >= 14 && age <= 90) {
+    console.log('Within range!');
+}
+
+// with NOT
+if (!(age >= 14) || age >= 90) {
+    console.log('Outside range!');
+}
+
+// without NOT
+if (age <= 14 || age >= 90) {
+    console.log('Outside range!');
+}
+
+if (-1 || 0) console.log('first'); // -1 is returned as true. If statement does execute
+if (-1 && 0) console.log('second'); // 0 is returned as false. If statement does NOT execute
+if (null || -1 && 1) console.log('third'); // -1 && 1 is returned as true. If statement does execute

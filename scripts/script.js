@@ -621,3 +621,12 @@ function loginPractice() {
         alert('I don\'t know you');
     }
 }
+
+// --------------------------------------------------
+// Best Practice Principles
+// --------------------------------------------------
+console.log("\n\n-Best Practice Principles-");
+
+// If else statements can be shortened with line breaks and without curly braces.
+// This is efficient, but less clear and should be avoided to allow better readability in the future
+

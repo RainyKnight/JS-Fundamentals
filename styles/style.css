@@ -14,6 +14,11 @@ body {
     text-align: center;
 }
 
+#symbol {
+    margin: -0.6rem;
+    visibility: hidden;
+}
+
 section {
     display: flex;
     flex-direction: column;

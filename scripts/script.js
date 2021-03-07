@@ -38,6 +38,7 @@ For example:
 let num1 = null;
 let num2 = null;
 let result = null;
+let symbol;
 
 
 // ------------------------------------------------------------------------------------------------
@@ -54,6 +55,7 @@ function hide() {
     document.getElementById("increment").style.visibility = "hidden";
     document.getElementById("decrement").style.visibility = "hidden";
     document.getElementById("clearBtn").style.visibility = "hidden";
+    document.getElementById("symbol").style.visibility = "hidden";
     // Look into query selector for easy class selection
     // Otherwise I need to mess with HTMLCollection array stuff
 }
@@ -63,11 +65,13 @@ function show() {
     document.getElementById("increment").style.visibility = "visible";
     document.getElementById("decrement").style.visibility = "visible";
     document.getElementById("clearBtn").style.visibility = "visible";
+    document.getElementById("symbol").style.visibility = "visible";
 }
 
 function print() {
     console.log(result);
     document.getElementById("spew").innerHTML = result;
+    document.getElementById("symbol").innerHTML = symbol;
     if (validate() == true) {
         // show the result and hidden elements
         show();
@@ -77,6 +81,7 @@ function print() {
 // ------------------------------------------------------------------------------------------------
 
 function add() {
+    symbol = '+';
     store();
     //  unary plus to keep from concatenating strings with addition
     result = +num1 + +num2;
@@ -84,36 +89,42 @@ function add() {
 }
 
 function subtract() {
+    symbol = '-';
     store();
     result = num1 - num2;
     print();
 }
 
 function multiply() {
+    symbol = '*';
     store();
     result = num1 * num2;
     print();
 }
 
 function exponent() {
+    symbol = '^';
     store();
     result = num1 ** num2;
     print();
 }
 
 function divide() {
+    symbol = '/';
     store();
     result = num1 / num2;
     print();
 }
 
 function mod() {
+    symbol = '%';
     store();
     result = num1 % num2;
     print();
 }
 
 function divide() {
+    symbol = '/';
     store();
     result = num1 / num2;
     print();

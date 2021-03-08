@@ -572,6 +572,11 @@ console.log(!5); // false
 // !! is sometimes used to convert a value to boolean while maintaining the same value
 console.log(!!5); // true
 
+// --------------------------------------------------
+// Ternary Operator ?:
+// --------------------------------------------------
+console.log("\n\n-Ternary - ?:-");
+
 
 // --------------------------------------------------
 // Operator Practice

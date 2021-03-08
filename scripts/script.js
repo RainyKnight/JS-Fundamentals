@@ -577,6 +577,13 @@ console.log(!!5); // true
 // --------------------------------------------------
 console.log("\n\n-Ternary - ?:-");
 
+// ( condition ) ? run this code : run this code instead
+// (true) ? This is run : This is NOT run
+// (false) ? This is NOT run : This is run
+
+// Example:
+// let greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have a great day!' : 'Good morning Mrs. Smith.';
+
 
 // --------------------------------------------------
 // Operator Practice

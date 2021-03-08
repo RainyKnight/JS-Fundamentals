@@ -641,3 +641,23 @@ console.log("\n\n-Best Practice Principles-");
 // If else statements can be shortened with line breaks and without curly braces.
 // This is efficient, but less clear and should be avoided to allow better readability in the future
 
+
+// --------------------------------------------------
+// Switch
+// --------------------------------------------------
+console.log("\n\n-Switch-");
+
+// switch (expression) {
+//     case choice1:
+//         console.log('run this code');
+//         break;
+
+//     case choice2:
+//         console.log('run this code instead');
+//         break;
+
+//     // include as many cases as you like
+
+//     default:
+//         console.log('actually, just run this code');
+// }

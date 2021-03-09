@@ -572,6 +572,7 @@ console.log(!5); // false
 // !! is sometimes used to convert a value to boolean while maintaining the same value
 console.log(!!5); // true
 
+
 // --------------------------------------------------
 // Ternary Operator ?:
 // --------------------------------------------------
@@ -584,6 +585,10 @@ console.log("\n\n-Ternary - ?:-");
 // Example:
 // let greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have a great day!' : 'Good morning Mrs. Smith.';
 
+let test = false;
+string = (test) ? 'This is true' : 'This is false';
+
+console.log(string);
 
 // --------------------------------------------------
 // Operator Practice

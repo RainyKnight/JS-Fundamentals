@@ -585,7 +585,7 @@ console.log("\n\n-Ternary - ?:-");
 // Example:
 // let greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have a great day!' : 'Good morning Mrs. Smith.';
 
-let test = false;
+let test = Math.floor(Math.random() * 2); // Randomly pick 1 or 0, a truthy or falsy number
 string = (test) ? 'This is true' : 'This is false';
 
 console.log(string);

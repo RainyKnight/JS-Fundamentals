@@ -658,7 +658,13 @@ console.log("\n\n-Best Practice Principles-");
 // If else statements can be shortened with line breaks and without curly braces.
 // This is efficient, but less clear and should be avoided to allow better readability in the future
 
-
+// Falsy Values
+// 0, empty string "", null, undefined, and NaN will all convert to false
+console.log(`0 = ${!!0}`);
+console.log(`"" = ${!!''}`);
+console.log(`null = ${!!null}`);
+console.log(`undefined = ${!!undefined}`);
+console.log(`NaN = ${!!NaN}`);
 // --------------------------------------------------
 // Switch
 // --------------------------------------------------

@@ -665,6 +665,11 @@ console.log(`"" = ${!!''}`);
 console.log(`null = ${!!null}`);
 console.log(`undefined = ${!!undefined}`);
 console.log(`NaN = ${!!NaN}`);
+
+// Truthy Values
+console.log(`\n5 = ${!!5}`);
+console.log(`'John' = ${!!'john'}`);
+
 // --------------------------------------------------
 // Switch
 // --------------------------------------------------

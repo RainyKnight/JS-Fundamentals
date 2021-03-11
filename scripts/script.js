@@ -590,12 +590,19 @@ string = (test) ? 'This is true' : 'This is false';
 
 console.log(string);
 
+let age = 30;
+let message = (age < 4) ? 'Hello baby' :
+    (age < 18) ? 'Someday, kid' :
+        (age < 100) ? 'Welcome to adulthood!' :
+            'Are you a transcendant being??';
+
+console.log(message);
 // --------------------------------------------------
 // Operator Practice
 // --------------------------------------------------
 console.log("\n\n-Operator Practice-");
 
-let age = 13;
+age = 13;
 
 
 if (age >= 14 && age <= 90) {

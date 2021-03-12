@@ -726,7 +726,7 @@ else {
 // --------------------------------------------------
 // Rewrite 'if' into '?' Practice
 // --------------------------------------------------
-console.log("\n\n-Rewrite 'if' into '?'-");
+console.log("\n\n-Rewrite 'if' into '?' Practice-");
 
 // result;
 
@@ -739,6 +739,38 @@ console.log("\n\n-Rewrite 'if' into '?'-");
 
 result = (a + b < 4) ? 'Below' : "Over";
 console.log(result);
+
+// --------------------------------------------------
+// Rewrite 'if..else' into '?' Practice
+// --------------------------------------------------
+console.log("\n\n-Rewrite 'if..else' into '?' Practice-");
+
+login = prompt('Username:');
+message;
+
+// if (login == 'Employee') {
+//     message = 'Hello';
+// } else if (login == 'Director') {
+//     message = 'Greetings';
+// } else if (login == '') {
+//     message = 'No login';
+// } else {
+//     message = '';
+// }
+
+// alert(message);
+
+/*
+
+message = (login == 'Employee') ? 'Hello' :
+    (login == 'Director') ? 'Greetings' :
+        (login == '') ? 'No login' :
+            '';
+
+alert(message);
+
+*/
+
 
 // --------------------------------------------------
 // Best Practice Principles

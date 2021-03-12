@@ -680,6 +680,10 @@ console.log("\n\n-Best Practice Principles-");
 // If else statements can be shortened with line breaks and without curly braces.
 // This is efficient, but less clear and should be avoided to allow better readability in the future
 
+// Only use ternary operator for single conditional statements. Like true/false
+// Otherwise use if else
+// And if there a LOT of outcomes, use a switch statement
+
 // Falsy Values
 // 0, empty string "", null, undefined, and NaN will all convert to false
 console.log(`0 = ${!!0}`);

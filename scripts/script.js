@@ -590,13 +590,28 @@ string = (test) ? 'This is true' : 'This is false';
 
 console.log(string);
 
-let age = 30;
+let age = Math.floor(Math.random() * 150);
 let message = (age < 4) ? 'Hello baby' :
     (age < 18) ? 'Someday, kid' :
         (age < 100) ? 'Welcome to adulthood!' :
             'Are you a transcendant being??';
 
 console.log(message);
+
+// Here's the same function utilizing if else instead of ?
+if (age < 4) {
+    message = 'Hello baby';
+}
+else if (age < 18) {
+    message = 'Someday, kid';
+} else if (age < 100) {
+    message = 'Welcome to adulthood!';
+} else {
+    message = 'Are you a transcendant being??';
+}
+
+console.log(message);
+
 // --------------------------------------------------
 // Operator Practice
 // --------------------------------------------------

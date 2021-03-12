@@ -706,6 +706,8 @@ console.log("\n\n-Show the Sign Practice-");
 
 // In this task we assume that the input is always a number.
 
+/*
+
 num = prompt('Please enter a whole number:');
 
 if (num > 0) {
@@ -718,6 +720,25 @@ else {
     alert(0);
 }
 
+*/
+
+
+// --------------------------------------------------
+// Rewrite 'if' into '?' Practice
+// --------------------------------------------------
+console.log("\n\n-Rewrite 'if' into '?'-");
+
+// result;
+
+// if (a + b < 4) {
+//     result = 'Below';
+// } else {
+//     result = 'Over';
+// }
+// console.log(result);
+
+result = (a + b < 4) ? 'Below' : "Over";
+console.log(result);
 
 // --------------------------------------------------
 // Best Practice Principles

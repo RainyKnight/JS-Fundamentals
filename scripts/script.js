@@ -613,6 +613,27 @@ else if (age < 18) {
 console.log(message);
 
 // --------------------------------------------------
+// Switch
+// --------------------------------------------------
+console.log("\n\n-Switch-");
+
+// switch (expression) {
+//     case choice1:
+//         console.log('run this code');
+//         break;
+
+//     case choice2:
+//         console.log('run this code instead');
+//         break;
+
+//     // include as many cases as you like
+
+//     default:
+//         console.log('actually, just run this code');
+// }
+
+
+// --------------------------------------------------
 // Operator Practice
 // --------------------------------------------------
 console.log("\n\n-Operator Practice-");
@@ -673,6 +694,32 @@ function loginPractice() {
 }
 
 // --------------------------------------------------
+// Show the Sign Practice
+// --------------------------------------------------
+console.log("\n\n-Show the Sign Practice-");
+
+// Using if..else, write the code which gets a number via prompt and then shows in alert:
+
+// 1, if the value is greater than zero,
+// -1, if less than zero,
+// 0, if equals zero.
+
+// In this task we assume that the input is always a number.
+
+num = prompt('Please enter a whole number:');
+
+if (num > 0) {
+    alert(1);
+}
+else if (num < 0) {
+    alert(-1);
+}
+else {
+    alert(0);
+}
+
+
+// --------------------------------------------------
 // Best Practice Principles
 // --------------------------------------------------
 console.log("\n\n-Best Practice Principles-");
@@ -695,23 +742,3 @@ console.log(`NaN = ${!!NaN}`);
 // Truthy Values
 console.log(`\n5 = ${!!5}`);
 console.log(`'John' = ${!!'john'}`);
-
-// --------------------------------------------------
-// Switch
-// --------------------------------------------------
-console.log("\n\n-Switch-");
-
-// switch (expression) {
-//     case choice1:
-//         console.log('run this code');
-//         break;
-
-//     case choice2:
-//         console.log('run this code instead');
-//         break;
-
-//     // include as many cases as you like
-
-//     default:
-//         console.log('actually, just run this code');
-// }

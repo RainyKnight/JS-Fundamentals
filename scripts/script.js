@@ -206,7 +206,9 @@ function clearElements() {
 function strings() {
     console.log("\n\n-Strings-");
 
-    let string1 = 'Blah blah blah';
+    let string1, string2, joined;
+
+    string1 = 'Blah blah blah';
     console.log(string1);
 
     // Examples of string parse errors
@@ -214,7 +216,7 @@ function strings() {
     // let badString2 = 'This is a test;
     // let badString3 = This is a test';
 
-    let string2 = string1;
+    string2 = string1;
     console.log(string2);
 
     // ------------------------
@@ -232,7 +234,7 @@ function strings() {
     // ------------------------
     string1 = 'Hello ';
     string2 = 'my ';
-    let joined = string1 + string2 + 'friend.';
+    joined = string1 + string2 + 'friend.';
     console.log(joined);
 
     // NOTE: When a string is enclosed in quotes, it is known as a 'string literal'
@@ -276,10 +278,13 @@ function numsVsStrings() {
 // templateLiteral();
 
 function templateLiteral() {
+    console.log("\n\n--Template Literals--");
 
-    let stringLiteral = 'Pepper';
+    let stringLiteral, templateLiteral;
+
+    stringLiteral = 'Pepper';
     // template literals take into account new lines and spacing from the code
-    let templateLiteral = `I really like my cat. 
+    templateLiteral = `I really like my cat. 
 ${stringLiteral} is super sweet and fluffy!`;
 
     console.log(templateLiteral);
@@ -298,9 +303,11 @@ ${stringLiteral} is super sweet and fluffy!`;
 function stringMethodsAndProperties() {
     console.log("\n\n\n\n--String Methods and Properties--".toUpperCase()); // toUpperCase()
 
-    let txt = 'asdasdasdasdasdasda';
+    let txt, length;
+
+    txt = 'asdasdasdasdasdasda';
     console.log(txt);
-    let length = txt.length; // .length
+    length = txt.length; // .length
     console.log(`The above statement is ${length} characters long.`);
 }
 
@@ -446,71 +453,104 @@ function convertUpperToLower() {
 // --------------------------------------------------
 // String Concatenation
 // --------------------------------------------------
-console.log("\n\n--String Concatenation--");
 
-// concat() combines the strings like the + operator
-let text = "Hello" + " " + "World!";
-console.log(text);
-text = "Hello".concat(" ", "World", "!");
-console.log(text);
+// uncomment to run the function below
+// stringConcatenation();
+
+function stringConcatenation() {
+    console.log("\n\n--String Concatenation--");
+
+    let text;
+
+    // concat() combines the strings like the + operator
+    text = "Hello" + " " + "World!";
+    console.log(text);
+    text = "Hello".concat(" ", "World", "!"); // concat();
+    console.log(text);
+}
 
 // --------------------------------------------------
 // String Trim
 // --------------------------------------------------
-console.log("\n\n--String Trim--");
 
-// Removes whitespace
-string = `               Hello World                  `;
-console.log(string);
-let trim = string.trim();
-console.log(trim);
+// uncomment to run the function below
+// stringTrim();
+
+function stringTrim() {
+    console.log("\n\n--String Trim--");
+
+    let string, trim;
+
+    // Removes whitespace
+    string = `               Hello World                  `;
+    console.log(string);
+    trim = string.trim();
+    console.log(trim);
+}
 
 // --------------------------------------------------
 // String Padding
 // --------------------------------------------------
-console.log("\n\n--String Padding--");
 
-// Adds to the string
-string = 'Hello';
-console.log(string);
-string = string.padStart(30, '+o');
-console.log(string);
+// uncomment to run the function below
+// stringPadding();
 
-string = 'Hello';
-console.log(string);
-string = string.padEnd(30, '+o');
-console.log(string);
+function stringPadding() {
+    console.log("\n\n--String Padding--");
+
+    let string;
+
+    // Adds to the string
+    string = 'Hello';
+    console.log(string);
+    string = string.padStart(10, '+o'); // padStart(full length, 'string')
+    console.log(string);
+
+    string = 'Hello';
+    console.log(string);
+    string = string.padEnd(10, '+o'); // padEnd(full length, 'string')
+    console.log(string);
+}
 
 // --------------------------------------------------
 // Extracting String Characters
 // --------------------------------------------------
-console.log("\n\n--Extracting String Characters--");
 
-// ------------------------
-// charAt(position)
-// charAt returns the specified position in the string
-string = 'Hello World';
-console.log(string);
-let char = string.charAt(6);
-console.log(char);
+// uncomment to run the function below
+// extractingStringCharacters();
 
-// ------------------------
-// charCodeAt(position)
-// charAt returns the unicode of the specified position in the string
-string = 'Hello World';
-console.log(string);
-char = string.charCodeAt(6);
-console.log(char);
+function extractingStringCharacters() {
+    console.log("\n\n--Extracting String Characters--");
 
-// ------------------------
-// Property Access
-// charAt returns the specified position in the string
-// NOTE: Strings are still not arrays!!!
-string = 'Hello World';
-console.log(string);
-char = string[6];
-console.log(char);
-// NOTE: This method is read only and cannot edit the actual string
+    let string, char;
+    const POSITION = Math.floor(Math.random() * 10);
+
+    // ------------------------
+    // charAt(position)
+    // charAt returns the specified position in the string
+    string = 'Hello World';
+    console.log(string);
+    char = string.charAt(POSITION);
+    console.log(`Character at position ${POSITION}: "${char}"`);
+
+    // ------------------------
+    // charCodeAt(position)
+    // charAt returns the unicode of the specified position in the string
+    string = 'Hello World';
+    console.log(string);
+    char = string.charCodeAt(POSITION);
+    console.log(char);
+
+    // ------------------------
+    // Property Access
+    // charAt returns the specified position in the string
+    // NOTE: Strings are still not arrays!!!
+    string = 'Hello World';
+    console.log(string);
+    char = string[POSITION];
+    console.log(char);
+    // NOTE: This method is read only and cannot edit the actual string
+}
 
 // --------------------------------------------------
 // Converting a String to an Array

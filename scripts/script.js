@@ -697,6 +697,9 @@ function loginPractice() {
 // Show the Sign Practice
 // --------------------------------------------------
 
+// uncomment to run the practice
+// showTheSignPractice();
+
 // Using if..else, write the code which gets a number via prompt and then shows in alert:
 
 // 1, if the value is greater than zero,
@@ -719,11 +722,14 @@ function showTheSignPractice() {
         alert(0);
     }
 }
-// showTheSignPractice();
 
 // --------------------------------------------------
 // If Ternary Practice
 // --------------------------------------------------
+
+// uncomment to run the practice
+// ifTernaryPractice();
+
 function ifTernaryPractice() {
     console.log("\n\n-If Ternary Practice-");
 
@@ -749,39 +755,46 @@ function ifTernaryPractice() {
 
 }
 
-ifTernaryPractice();
-
 // --------------------------------------------------
-// Rewrite 'if..else' into '?' Practice
+// If Else Ternary Practice
 // --------------------------------------------------
-console.log("\n\n-Rewrite 'if..else' into '?' Practice-");
 
-// login = prompt('Username:');
-// message;
+// uncomment to run the practice
+// ifElseTernaryPractice();
 
-// if (login == 'Employee') {
-//     message = 'Hello';
-// } else if (login == 'Director') {
-//     message = 'Greetings';
-// } else if (login == '') {
-//     message = 'No login';
-// } else {
-//     message = '';
-// }
 
-// alert(message);
+function ifElseTernaryPractice() {
+    console.log("\n\n-If Else Ternary Practice-");
 
-/*
- 
-message = (login == 'Employee') ? 'Hello' :
-    (login == 'Director') ? 'Greetings' :
-        (login == '') ? 'No login' :
-            '';
- 
-alert(message);
- 
-*/
+    let login = prompt('Username:');
+    let message;
 
+    // "if...else" statement version
+
+    /*
+    if (login == 'Employee') {
+        message = 'Hello';
+    } else if (login == 'Director') {
+        message = 'Greetings';
+    } else if (login == '') {
+        message = 'No login';
+    } else {
+        message = '';
+    }
+
+    alert(message);
+    */
+
+
+    // "ternary" statement version
+    message = (login == 'Employee') ? 'Hello' :
+        (login == 'Director') ? 'Greetings' :
+            (login == '') ? 'No login' :
+                '';
+
+    alert(message);
+
+}
 
 // --------------------------------------------------
 // Best Practice Principles

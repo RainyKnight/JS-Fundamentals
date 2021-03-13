@@ -1,2 +1,2 @@
 # JS-Fundamentals
-A playground where I can learn basic JavaScript fundamentals
+A playground where I can practice basic JavaScript fundamentals.

@@ -50,6 +50,13 @@ function store() {
     validate();
 }
 
+// Check for input
+function validate() {
+    if (num1 && num2) {
+        return true;
+    }
+}
+
 function hide() {
     document.getElementById("spew").style.visibility = "hidden";
     document.getElementById("increment").style.visibility = "hidden";
@@ -72,7 +79,7 @@ function print() {
     console.log(result);
     document.getElementById("spew").innerHTML = result;
     document.getElementById("symbol").innerHTML = symbol;
-    if (validate() == true) {
+    if (validate() === true) {
         // show the result and hidden elements
         show();
     }
@@ -130,8 +137,6 @@ function divide() {
     print();
 }
 
-
-
 function increment() {
     result++;
     print();
@@ -142,8 +147,7 @@ function decrement() {
     print();
 }
 
-
-
+// reset values and hide needless elements
 function clearElements() {
     result = 0;
     num1 = 0;
@@ -153,14 +157,6 @@ function clearElements() {
     print();
     hide();
 }
-
-// Check for input
-function validate() {
-    if (num1 && num2) {
-        return true;
-    }
-}
-
 
 // ------------------------------------------------------------------------------------------------
 // The Odin Project js fundamentals Part 1
@@ -636,39 +632,45 @@ console.log("\n\n-Switch-");
 // --------------------------------------------------
 // Operator Practice
 // --------------------------------------------------
-console.log("\n\n-Operator Practice-");
 
-age = 13;
+// uncomment to run the practice
+// operatorPractice();
+
+function operatorPractice() {
+    console.log("\n\n-Operator Practice-");
+
+    let age = 13;
 
 
-if (age >= 14 && age <= 90) {
-    console.log('Within range!');
+    if (age >= 14 && age <= 90) {
+        console.log('Within range!');
+    }
+
+    // with NOT
+    if (!(age >= 14) || age >= 90) {
+        console.log('Outside range!');
+    }
+
+    // without NOT
+    if (age <= 14 || age >= 90) {
+        console.log('Outside range!');
+    }
+
+    if (-1 || 0) console.log('first'); // -1 is returned as true. If statement does execute
+    if (-1 && 0) console.log('second'); // 0 is returned as false. If statement does NOT execute
+    if (null || -1 && 1) console.log('third'); // -1 && 1 is returned as true. If statement does execute
 }
-
-// with NOT
-if (!(age >= 14) || age >= 90) {
-    console.log('Outside range!');
-}
-
-// without NOT
-if (age <= 14 || age >= 90) {
-    console.log('Outside range!');
-}
-
-if (-1 || 0) console.log('first'); // -1 is returned as true. If statement does execute
-if (-1 && 0) console.log('second'); // 0 is returned as false. If statement does NOT execute
-if (null || -1 && 1) console.log('third'); // -1 && 1 is returned as true. If statement does execute
-
 
 // --------------------------------------------------
 // Check the Login Practice
 // --------------------------------------------------
-console.log("\n\n-Check the Login Practice-");
 
 // uncomment to run the practice
 // loginPractice();
 
 function loginPractice() {
+    console.log("\n\n-Check the Login Practice-");
+
     let username, password;
 
     username = prompt('Who\'s there?');

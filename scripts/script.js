@@ -13,19 +13,18 @@ For example:
 ==
     Compares values then spits out a boolean.
 
-    var x = 500;             
-    var y = new Number(500);
+    let x = 500;             
+    let y = new Number(500);
 
     // (x == y) is true because x and y have equal values
-
 
 
 ===
 
     Compares values AND types then spits out a boolean.
 
-    var x = 500;             
-    var y = new Number(500);
+    let x = 500;             
+    let y = new Number(500);
 
     // (x === y) is false because x and y have different types
 
@@ -158,6 +157,18 @@ function clearElements() {
     hide();
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 // ------------------------------------------------------------------------------------------------
 // The Odin Project js fundamentals Part 1
 
@@ -189,65 +200,90 @@ function clearElements() {
 // ------------------------------------------------------------------------------------------------
 // The Odin Project js fundamentals Part 2
 
-let string = 'Blah blah blah';
-console.log(string);
+// uncomment to run the function below
+// strings();
 
-// Examples of string parse errors
-// let badString1 = This is a test;
-// let badString2 = 'This is a test;
-// let badString3 = This is a test';
+function strings() {
+    console.log("\n\n-Strings-");
 
-let badString = string;
-console.log(badString);
+    let string1 = 'Blah blah blah';
+    console.log(string1);
 
-// ------------------------
-// Quotes in quotes
-// ------------------------
-// Problem: Quote within a string
-// let bigmouth = 'I've got no right to take my place...';
+    // Examples of string parse errors
+    // let badString1 = This is a test;
+    // let badString2 = 'This is a test;
+    // let badString3 = This is a test';
 
-// Solution: escape the quotation with a \
-let bigmouth = 'I\'ve got no right to take my place...';
-console.log(bigmouth);
+    let string2 = string1;
+    console.log(string2);
 
-// ------------------------
-// Concatenating Strings
-// ------------------------
-let wordOne = 'Hello ';
-let wordTwo = 'my ';
-let joined = wordOne + wordTwo + 'friend.';
-console.log(joined);
+    // ------------------------
+    // Quotes in quotes
+    // ------------------------
+    // Problem: Quote within a string
+    // string1 = 'I've been waiting all day...';
 
-// NOTE: When a string is enclosed in quotes, it is known as a 'string literal'
+    // Solution: escape the quotation with a \
+    string1 = 'I\'ve been waiting all day...';
+    console.log(string1);
+
+    // ------------------------
+    // Concatenating Strings
+    // ------------------------
+    string1 = 'Hello ';
+    string2 = 'my ';
+    let joined = string1 + string2 + 'friend.';
+    console.log(joined);
+
+    // NOTE: When a string is enclosed in quotes, it is known as a 'string literal'
+}
 
 // ------------------------
 // Numbers vs. Strings
 // ------------------------
-let nums = 234;
-let stringLiteral = 'nifty';
-console.log(nums + stringLiteral);
-console.log(typeof nums);
-console.log(typeof stringLiteral);
 
-// Converting to a number
-nums = '2354';
-console.log('Before Number() = ' + typeof nums);
-nums = Number(nums);
-console.log('After Number() = ' + typeof nums);
+// uncomment to run the function below
+// numsVsStrings();
 
-// Converting to a string
-nums = 2354;
-console.log('Before toString() = ' + typeof nums);
-nums = toString(nums);
-console.log('After toString() = ' + typeof nums);
+function numsVsStrings() {
+    console.log("\n\n-Nums VS Strings-");
+
+    let nums = 234;
+    let stringLiteral = 'nifty';
+
+    console.log(nums + stringLiteral);
+    console.log(typeof nums);
+    console.log(typeof stringLiteral);
+
+    // Converting to a number
+    nums = '2354';
+    console.log('Before Number() = ' + typeof nums);
+    nums = Number(nums);
+    console.log('After Number() = ' + typeof nums);
+
+    // Converting to a string
+    nums = 2354;
+    console.log('Before toString() = ' + typeof nums);
+    nums = toString(nums);
+    console.log('After toString() = ' + typeof nums);
+}
 
 // ------------------------
 // Template Literals
 // ------------------------
-let catName = 'Honey';
-let templateLiteral = `I really like my cat. 
-${catName} is super sweet and fluffy!`;
-console.log(templateLiteral);
+
+// uncomment to run the function below
+// templateLiteral();
+
+function templateLiteral() {
+
+    let stringLiteral = 'Pepper';
+    // template literals take into account new lines and spacing from the code
+    let templateLiteral = `I really like my cat. 
+${stringLiteral} is super sweet and fluffy!`;
+
+    console.log(templateLiteral);
+}
 
 // placeholder - ${}
 // new line character - \n\n
@@ -255,121 +291,157 @@ console.log(templateLiteral);
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // String Methods and Properties
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-console.log("\n\n\n\n--String Methods and Properties--".toUpperCase());
 
-// .length
-let txt = 'asdasdasdasdasdasda';
-console.log(txt);
-let length = txt.length;
-console.log(`The above statement is ${length} characters long.`);
+// uncomment to run the function below
+// stringMethodsAndProperties();
+
+function stringMethodsAndProperties() {
+    console.log("\n\n\n\n--String Methods and Properties--".toUpperCase()); // toUpperCase()
+
+    let txt = 'asdasdasdasdasdasda';
+    console.log(txt);
+    let length = txt.length; // .length
+    console.log(`The above statement is ${length} characters long.`);
+}
 
 // --------------------------------------------------
 // Finding a string within a string
 // --------------------------------------------------
-console.log("\n\n--Finding a string within a string--");
 
-// ------------------------
-// indexOf('string', starting position);
-// searches going right
-string = `You know what I love? Apples. They're so crunchy and delicious!`;
-console.log(string);
-let word = string.indexOf('Apple');
-console.log(`\The word \"Apple\" found starting at position: ${word}`);
+// uncomment to run the function below
+// stringWithinAString();
 
-// ------------------------
-// lastIndexOf('string', starting position);
-// searches going left
-string = `Boy I sure do love apples. 
+function stringWithinAString() {
+    console.log("\n\n--Finding a string within a string--");
+
+    let string, word;
+
+    // ------------------------
+    // indexOf('string', starting position);
+    // searches going right
+    string = `You know what I love? Apples. They're so crunchy and delicious!`;
+    console.log(string);
+    word = string.indexOf('Apple'); // indexOf()
+    console.log(`\The word \"Apple\" found starting at position: ${word}`);
+
+    // ------------------------
+    // lastIndexOf('string', starting position);
+    // searches going left
+    string = `Boy I sure do love apples. 
 Apples are my favorite fruit and I don't know what I'd do without them. 
 You know what they say 
 \"an apple a day keeps the doctor away.\"`;
-console.log(string);
-word = string.lastIndexOf(`apple`);
-console.log(`\The word \"Apple\" last found starting at position: ${word}`);
+    console.log(string);
+    word = string.lastIndexOf(`apple`); // lastIndexOf()
+    console.log(`\The word \"Apple\" last found starting at position: ${word}`);
 
-// ------------------------
-// search('string');
-// searches going left
-string = `Boy oh boy, today sure is going to be a great day!`;
-console.log(string);
-word = string.search('boy');
-console.log(`\The word \"boy\" found starting at position: ${word}`);
+    // ------------------------
+    // search('string');
+    // searches going left
+    string = `Boy oh boy, today sure is going to be a great day!`;
+    console.log(string);
+    word = string.search('boy'); // search()
+    console.log(`\The word \"boy\" found starting at position: ${word}`);
+}
 
 // --------------------------------------------------
 // Extracting string parts
 // --------------------------------------------------
-console.log("\n\n--Extracting string parts--");
 
-// ------------------------
-// slice(start, end);
-// Creates a new string from the specified values
-// Real life example: clipboard feature
-string = "Howdy dowdy water sure is important!";
-console.log(string);
+// uncomment to run the function below
+// extractingStringParts();
 
-let slice = string.slice(12, 36);
-console.log(slice);
+function extractingStringParts() {
+    console.log("\n\n--Extracting string parts--");
 
-// positive values count spaces from the left
-slice = string.slice(12);
-console.log(slice);
+    let string, slice, substring, substr;
 
-// negative values count spaces from the right
-slice = string.slice(-24);
-console.log(slice);
+    // ------------------------
+    // slice(start, end);
+    // Creates a new string from the specified values
+    // Real life example: clipboard feature
+    string = "Howdy dowdy water sure is important!";
+    console.log(string);
 
-// ------------------------
-// substring(start, end);
-// Creates a new string from the specified values
-// NOTE: CANNOT ACCEPT NEGATIVE VALUES
-string = "Holy cannoli kiwis sure are hairy!";
-console.log(string);
-let subString = string.substring(13, 18);
-console.log(subString);
+    slice = string.slice(12, 36); // slice()
+    console.log(slice);
 
-// ------------------------
-// substr(start, end);
-// Creates a new string from the specified values
-// NOTE: THE SECOND PARAMETER DENOTES LENGTH OF SLICE, NOT POSITION
-string = `When the moon hits your eye like a big pizza pie, that's amore.`;
-console.log(string);
-let substr = string.substr(9, 4);
-console.log(substr);
+    // positive values count spaces from the left
+    slice = string.slice(12);
+    console.log(slice);
+
+    // negative values count spaces from the right
+    slice = string.slice(-24);
+    console.log(slice);
+
+    // ------------------------
+    // substring(start, end);
+    // Creates a new string from the specified values
+    // NOTE: CANNOT ACCEPT NEGATIVE VALUES
+    string = "Holy cannoli kiwis sure are hairy!";
+    console.log(string);
+    substring = string.substring(13, 18); // substring()
+    console.log(substring);
+
+    // ------------------------
+    // substr(start, end);
+    // Creates a new string from the specified values
+    // NOTE: THE SECOND PARAMETER DENOTES LENGTH OF SLICE, NOT POSITION
+    string = `When the moon hits your eye like a big pizza pie, that's amore.`;
+    console.log(string);
+    substr = string.substr(9, 4);
+    console.log(substr);
+}
 
 // --------------------------------------------------
 // Replacing String Content
 // --------------------------------------------------
-console.log("\n\n--Replacing String Content--");
 
-// replace(target, replacement);
-// NOTE: CASE SENSITIVE
-// NOTE: RETURNS THE FIRST MATCH
-string = `Blue is my favorite color! Just like the nice, blue, sky!`;
-console.log(string);
-let newString = string.replace('blue', 'red');
-console.log(newString);
+// uncomment to run the function below
+// replacingStringContent();
 
-// To make it case insensitive, use the following regular expression - /i
-newString = string.replace(/blue/i, 'Red');
-console.log(newString);
+function replacingStringContent() {
+    console.log("\n\n--Replacing String Content--");
 
-// To replace all occurrences, use the following regular expression - /g
-newString = string.replace(/blue/g, 'red');
-console.log(newString);
-// NOTE: Regular expressions can be stacked like terminal commands
+    let string, newString;
+
+    // replace(target, replacement);
+    // NOTE: CASE SENSITIVE
+    // NOTE: RETURNS THE FIRST MATCH
+    string = `Blue is my favorite color! Just like the nice, blue, sky!`;
+    console.log(string);
+    newString = string.replace('blue', 'red'); // replace()
+    console.log(newString);
+
+    // To make it case insensitive, use the following regular expression - /i
+    newString = string.replace(/blue/i, 'Red');
+    console.log(newString);
+
+    // To replace all occurrences, use the following regular expression - /g
+    newString = string.replace(/blue/g, 'red');
+    console.log(newString);
+    // NOTE: Regular expressions can be stacked like terminal commands
+}
 
 // --------------------------------------------------
 // Converting to Upper or Lower Case
 // --------------------------------------------------
-console.log("\n\n--Converting to Upper or Lower Case--");
 
-// toUpperCase() or toLowerCase()
-string = `Hello my name is Lucas!`;
-console.log(`Original: ${string}`);
-let upper = string.toUpperCase();
-console.log(`UpperCase: ${upper}`);
-let lower = string.toLowerCase();
-console.log(`LowerCase: ${lower}`);
+// uncomment to run the function below
+// convertUpperToLower();
+
+function convertUpperToLower() {
+    console.log("\n\n--Converting to Upper or Lower Case--");
+
+    let string, upper, lower;
+
+    string = `Hello my name is Lucas!`;
+    console.log(`Original: ${string}`);
+    upper = string.toUpperCase(); // toUpperCase()
+    console.log(`UpperCase: ${upper}`);
+    lower = string.toLowerCase(); // toLowerCase()
+    console.log(`LowerCase: ${lower}`);
+}
 
 // --------------------------------------------------
 // String Concatenation
@@ -443,16 +515,20 @@ console.log(char);
 // --------------------------------------------------
 // Converting a String to an Array
 // --------------------------------------------------
-console.log("\n\n--Converting a String to an Array--");
 
-// split()
+// uncomment to run the function below
+// stringToArray();
 
-string = 'My cat has a massive amount of floof';
-console.log(string);
-string.split(" ");
+function stringToArray() {
+    console.log("\n\n--Converting a String to an Array--");
 
-for (let i = 0; i < string.length; i++) {
-    console.log(string[i]);
+    string = 'My cat has a massive amount of floof';
+    console.log(string);
+    string.split(" "); // split()
+
+    for (let i = 0; i < string.length; i++) {
+        console.log(string[i]);
+    }
 }
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -801,23 +877,31 @@ function ifElseTernaryPractice() {
 // --------------------------------------------------
 // Best Practice Principles
 // --------------------------------------------------
-console.log("\n\n-Best Practice Principles-");
 
-// If else statements can be shortened with line breaks and without curly braces.
-// This is efficient, but less clear and should be avoided to allow better readability in the future
+// uncomment to run the practice
+// bestPracticePrinciples();
 
-// Only use ternary operator for single conditional statements. Like true/false
-// Otherwise use if else
-// And if there a LOT of outcomes, use a switch statement
+function bestPracticePrinciples() {
 
-// Falsy Values
-// 0, empty string "", null, undefined, and NaN will all convert to false
-console.log(`0 = ${!!0}`);
-console.log(`"" = ${!!''}`);
-console.log(`null = ${!!null}`);
-console.log(`undefined = ${!!undefined}`);
-console.log(`NaN = ${!!NaN}`);
+    console.log("\n\n-Best Practice Principles-");
 
-// Truthy Values
-console.log(`\n5 = ${!!5}`);
-console.log(`'John' = ${!!'john'}`);
+    // If else statements can be shortened with line breaks and without curly braces.
+    // This is efficient, but less clear and should be avoided to allow better readability in the future
+
+    // Only use ternary operator for single conditional statements. Like true/false
+    // Otherwise use if else
+    // And if there a LOT of outcomes, use a switch statement
+
+    // Falsy Values
+    // 0, empty string "", null, undefined, and NaN will all convert to false
+    console.log(`0 = ${!!0}`);
+    console.log(`"" = ${!!''}`);
+    console.log(`null = ${!!null}`);
+    console.log(`undefined = ${!!undefined}`);
+    console.log(`NaN = ${!!NaN}`);
+
+    // Truthy Values
+    console.log(`\n5 = ${!!5}`);
+    console.log(`'John' = ${!!'john'}`);
+
+}

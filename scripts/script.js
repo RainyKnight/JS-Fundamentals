@@ -562,187 +562,214 @@ function extractingStringCharacters() {
 function stringToArray() {
     console.log("\n\n--Converting a String to an Array--");
 
+    let string;
+
     string = 'My cat has a massive amount of floof';
     console.log(string);
     string.split(" "); // split()
 
     for (let i = 0; i < string.length; i++) {
-        console.log(string[i]);
+        console.log(`[${i}] ${string[i]}`);
     }
 }
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // If Else Statements
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-console.log("\n\n--If Else Statements--");
 
-let date = new Date();
-let timePeriod;
+// uncomment to run the function below
+// ifElseStatements();
 
-// --------------------------------------------------
-// if
-// --------------------------------------------------
-if (date.getHours() >= 12) {
-    timePeriod = 'PM'
+function ifElseStatements() {
+    console.log("\n\n--If Else Statements--");
+
+    let date = new Date();
+    let timePeriod;
+
+
+    if (date.getHours() >= 12) {
+        timePeriod = 'PM'
+    }
+    else {
+        timePeriod = 'AM';
+    }
+
+    console.log(`Current time is ${date.getHours()}:${date.getMinutes()} ${timePeriod}`);
 }
-
-// --------------------------------------------------
-// else
-// --------------------------------------------------
-else {
-    timePeriod = 'AM';
-}
-
-console.log(`Current time is ${date.getHours()}:${date.getMinutes()} ${timePeriod}`);
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // Logical Operators
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-console.log("\n\n--Logical Operators--");
 
-a = 5;
-b = -2;
-c = 87;
+// uncomment to run the function below
+// logicalOperators();
 
-// --------------------------------------------------
-// OR ||
-// --------------------------------------------------
-console.log("\n\n-OR - ||-");
+function logicalOperators() {
+    console.log("\n\n++Logical Operators++");
 
-if (a < 6 || b >= 2) {
-    console.log('howdy do');
-    // result ends up being true || false
-    // since there's at least one condition true, it returns the log
+    a = 5;
+    b = -2;
+    c = 87;
+
+    // orOperator();
+    // andOperator();
+    // notOperator();
+    // ternaryOperator();
+
+    // --------------------------------------------------
+    // OR ||
+    // --------------------------------------------------
+
+    function orOperator() {
+        console.log("\n\n-OR - ||-");
+
+        if (a < 6 || b >= 2) {
+            console.log('howdy do');
+            // result ends up being true || false
+            // since there's at least one condition true, it returns the log
+        }
+
+        console.log(true || true);
+        console.log(false || true);
+
+        // true = 1
+        // false = 0
+        console.log(true || false);
+        console.log(1 || 0);
+
+        console.log(false || false);
+
+        result = 0 || null || 1;
+        console.log(`First truthy: ${result}`);
+        // in the above example, it will return the first TRUTHY variable going left to right
+        // if none are found, it will return the final variable in the chain
+
+        // For example:
+        console.log(null || 0 || 1); // 1 is returned because 1 = true
+
+        let firstName = "";
+        let lastName = "";
+        let nickName = "SuperCoder";
+
+        console.log(firstName || lastName || nickName || "Anonymous"); // SuperCoder
+        // If all fields above are empty, it defaults to "Anonymous"
+
+        true || console.log("not printed");
+        false || console.log("printed");
+    }
+
+    // --------------------------------------------------
+    // AND &&
+    // --------------------------------------------------
+
+    function andOperator() {
+        console.log("\n\n-AND - &&-");
+
+        result = a && b;
+        console.log(result); // b = -2
+
+        // returns false if ANY are false
+        console.log(true && true);   // true
+        console.log(false && true);  // false
+        console.log(true && false);  // false
+        console.log(false && false); // false
+
+        result = 0 && null && 1;
+        console.log(`First falsy: ${result}`);
+        // in the above example, it will return the first FALSY variable going left to right
+
+        // && takes higher precedence than ||
+        console.log(0 || 1 && null); // null
+        // 0 || 1 && null
+        // 0 || (1 && null)
+        // 0 || (true && null)
+        // null
+
+        console.log(null || 2 && 3 || 4); // 3, furthest right
+    }
+
+    // --------------------------------------------------
+    // NOT !
+    // --------------------------------------------------
+
+    function notOperator() {
+        console.log("\n\n-NOT - !-");
+
+        // Converts to boolean then flips the boolean value
+
+        console.log(5);
+        console.log(!5); // false
+        // !! is sometimes used to convert a value to boolean while maintaining the same value
+        console.log(!!5); // true
+    }
+
+    // --------------------------------------------------
+    // Ternary Operator ?:
+    // --------------------------------------------------
+
+    function ternaryOperator() {
+        console.log("\n\n-Ternary - ?:-");
+
+        // ( condition ) ? run this code : run this code instead
+        // (true) ? This is run : This is NOT run
+        // (false) ? This is NOT run : This is run
+
+        // Example:
+        // let greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have a great day!' : 'Good morning Mrs. Smith.';
+
+        let test = Math.floor(Math.random() * 2); // Randomly pick 1 or 0, a truthy or falsy number
+        string = (test) ? 'This is true' : 'This is false';
+
+        console.log(string);
+
+        let age = Math.floor(Math.random() * 150);
+        let message = (age < 4) ? 'Hello baby' :
+            (age < 18) ? 'Someday, kid' :
+                (age < 100) ? 'Welcome to adulthood!' :
+                    'Are you a transcendant being??';
+
+        console.log(message);
+
+        // Here's the same function utilizing if else instead of ?
+        if (age < 4) {
+            message = 'Hello baby';
+        }
+        else if (age < 18) {
+            message = 'Someday, kid';
+        } else if (age < 100) {
+            message = 'Welcome to adulthood!';
+        } else {
+            message = 'Are you a transcendant being??';
+        }
+
+        console.log(message);
+    }
 }
-
-console.log(true || true);
-console.log(false || true);
-
-// true = 1
-// false = 0
-console.log(true || false);
-console.log(1 || 0);
-
-console.log(false || false);
-
-result = 0 || null || 1;
-console.log(`First truthy: ${result}`);
-// in the above example, it will return the first TRUTHY variable going left to right
-// if none are found, it will return the final variable in the chain
-
-// For example:
-console.log(null || 0 || 1); // 1 is returned because 1 = true
-
-let firstName = "";
-let lastName = "";
-let nickName = "SuperCoder";
-
-console.log(firstName || lastName || nickName || "Anonymous"); // SuperCoder
-// If all fields above are empty, it defaults to "Anonymous"
-
-true || console.log("not printed");
-false || console.log("printed");
-
-
-// --------------------------------------------------
-// AND &&
-// --------------------------------------------------
-console.log("\n\n-AND - &&-");
-
-result = a && b;
-console.log(result); // b = -2
-
-// returns false if ANY are false
-console.log(true && true);   // true
-console.log(false && true);  // false
-console.log(true && false);  // false
-console.log(false && false); // false
-
-result = 0 && null && 1;
-console.log(`First falsy: ${result}`);
-// in the above example, it will return the first FALSY variable going left to right
-
-// && takes higher precedence than ||
-console.log(0 || 1 && null); // null
-// 0 || 1 && null
-// 0 || (1 && null)
-// 0 || (true && null)
-// null
-
-console.log(null || 2 && 3 || 4); // 3, furthest right
-
-
-// --------------------------------------------------
-// NOT !
-// --------------------------------------------------
-console.log("\n\n-NOT - !-");
-
-// Converts to boolean then flips the boolean value
-
-console.log(5);
-console.log(!5); // false
-// !! is sometimes used to convert a value to boolean while maintaining the same value
-console.log(!!5); // true
-
-
-// --------------------------------------------------
-// Ternary Operator ?:
-// --------------------------------------------------
-console.log("\n\n-Ternary - ?:-");
-
-// ( condition ) ? run this code : run this code instead
-// (true) ? This is run : This is NOT run
-// (false) ? This is NOT run : This is run
-
-// Example:
-// let greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have a great day!' : 'Good morning Mrs. Smith.';
-
-let test = Math.floor(Math.random() * 2); // Randomly pick 1 or 0, a truthy or falsy number
-string = (test) ? 'This is true' : 'This is false';
-
-console.log(string);
-
-let age = Math.floor(Math.random() * 150);
-let message = (age < 4) ? 'Hello baby' :
-    (age < 18) ? 'Someday, kid' :
-        (age < 100) ? 'Welcome to adulthood!' :
-            'Are you a transcendant being??';
-
-console.log(message);
-
-// Here's the same function utilizing if else instead of ?
-if (age < 4) {
-    message = 'Hello baby';
-}
-else if (age < 18) {
-    message = 'Someday, kid';
-} else if (age < 100) {
-    message = 'Welcome to adulthood!';
-} else {
-    message = 'Are you a transcendant being??';
-}
-
-console.log(message);
 
 // --------------------------------------------------
 // Switch
 // --------------------------------------------------
-console.log("\n\n-Switch-");
 
-// switch (expression) {
-//     case choice1:
-//         console.log('run this code');
-//         break;
+// uncomment to run the function below
+// switchStatement();
 
-//     case choice2:
-//         console.log('run this code instead');
-//         break;
+function switchStatement() {
+    console.log("\n\n-Switch-");
 
-//     // include as many cases as you like
+    let expression = +prompt('1 or 2?');
 
-//     default:
-//         console.log('actually, just run this code');
-// }
+    switch (expression) {
+        case 1:
+            console.log('You typed 1');
+            break;
+        case 2:
+            console.log('You typed 2');
+            break;
+        // include as many cases as you like
+        default:
+            console.log('You didn\'t type either option :(');
+    }
+}
 
 
 // --------------------------------------------------
@@ -880,7 +907,6 @@ function ifTernaryPractice() {
 // uncomment to run the practice
 // ifElseTernaryPractice();
 
-
 function ifElseTernaryPractice() {
     console.log("\n\n-If Else Ternary Practice-");
 
@@ -899,7 +925,7 @@ function ifElseTernaryPractice() {
     } else {
         message = '';
     }
-
+ 
     alert(message);
     */
 

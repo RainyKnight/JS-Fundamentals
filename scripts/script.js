@@ -696,7 +696,6 @@ function loginPractice() {
 // --------------------------------------------------
 // Show the Sign Practice
 // --------------------------------------------------
-console.log("\n\n-Show the Sign Practice-");
 
 // Using if..else, write the code which gets a number via prompt and then shows in alert:
 
@@ -706,47 +705,59 @@ console.log("\n\n-Show the Sign Practice-");
 
 // In this task we assume that the input is always a number.
 
-/*
+function showTheSignPractice() {
 
-num = prompt('Please enter a whole number:');
+    let num = prompt('Please enter a whole number:');
 
-if (num > 0) {
-    alert(1);
+    if (num > 0) {
+        alert(1);
+    }
+    else if (num < 0) {
+        alert(-1);
+    }
+    else {
+        alert(0);
+    }
 }
-else if (num < 0) {
-    alert(-1);
-}
-else {
-    alert(0);
-}
-
-*/
-
+// showTheSignPractice();
 
 // --------------------------------------------------
-// Rewrite 'if' into '?' Practice
+// If Ternary Practice
 // --------------------------------------------------
-console.log("\n\n-Rewrite 'if' into '?' Practice-");
+function ifTernaryPractice() {
+    console.log("\n\n-If Ternary Practice-");
 
-// result;
+    let result;
+    let a = Math.floor(Math.random() * 10);
+    let b = Math.floor(Math.random() * 10);
 
-// if (a + b < 4) {
-//     result = 'Below';
-// } else {
-//     result = 'Over';
-// }
-// console.log(result);
+    console.log('a = ' + a);
+    console.log('b = ' + b);
+    console.log('sum = ' + (a + b));
 
-result = (a + b < 4) ? 'Below' : "Over";
-console.log(result);
+    // "if" statement version
+    if (a + b < 5) {
+        result = 'Below';
+    } else {
+        result = 'Over';
+    }
+    console.log(result);
+
+    // "ternary" statement version
+    result = (a + b < 5) ? 'Below' : "Over";
+    console.log(result);
+
+}
+
+ifTernaryPractice();
 
 // --------------------------------------------------
 // Rewrite 'if..else' into '?' Practice
 // --------------------------------------------------
 console.log("\n\n-Rewrite 'if..else' into '?' Practice-");
 
-login = prompt('Username:');
-message;
+// login = prompt('Username:');
+// message;
 
 // if (login == 'Employee') {
 //     message = 'Hello';
@@ -761,14 +772,14 @@ message;
 // alert(message);
 
 /*
-
+ 
 message = (login == 'Employee') ? 'Hello' :
     (login == 'Director') ? 'Greetings' :
         (login == '') ? 'No login' :
             '';
-
+ 
 alert(message);
-
+ 
 */
 
 

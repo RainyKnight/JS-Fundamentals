@@ -597,6 +597,31 @@ function ifElseStatements() {
     console.log(`Current time is ${date.getHours()}:${date.getMinutes()} ${timePeriod}`);
 }
 
+// --------------------------------------------------
+// Switch
+// --------------------------------------------------
+
+// uncomment to run the function below
+// switchStatement();
+
+function switchStatement() {
+    console.log("\n\n-Switch-");
+
+    let expression = +prompt('1 or 2?');
+
+    switch (expression) {
+        case 1:
+            console.log('You typed 1');
+            break;
+        case 2:
+            console.log('You typed 2');
+            break;
+        // include as many cases as you like
+        default:
+            console.log('You didn\'t type either option :(');
+    }
+}
+
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // Logical Operators
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -745,32 +770,6 @@ function logicalOperators() {
         console.log(message);
     }
 }
-
-// --------------------------------------------------
-// Switch
-// --------------------------------------------------
-
-// uncomment to run the function below
-// switchStatement();
-
-function switchStatement() {
-    console.log("\n\n-Switch-");
-
-    let expression = +prompt('1 or 2?');
-
-    switch (expression) {
-        case 1:
-            console.log('You typed 1');
-            break;
-        case 2:
-            console.log('You typed 2');
-            break;
-        // include as many cases as you like
-        default:
-            console.log('You didn\'t type either option :(');
-    }
-}
-
 
 // --------------------------------------------------
 // Operator Practice

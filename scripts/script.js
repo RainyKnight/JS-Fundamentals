@@ -604,7 +604,7 @@ function ifElseStatements() {
 // uncomment to run the function below
 // switchStatement();
 // gradeCalculator();
-monthSeasoning();
+// monthSeasoning();
 
 function switchStatement() {
     console.log("\n\n-Switch-");

@@ -603,6 +603,7 @@ function ifElseStatements() {
 
 // uncomment to run the function below
 // switchStatement();
+gradeCalculator();
 
 function switchStatement() {
     console.log("\n\n-Switch-");
@@ -619,7 +620,39 @@ function switchStatement() {
         // include as many cases as you like
         default:
             console.log('You didn\'t type either option :(');
+    }4
+}
+
+// Switch statement range practice
+function gradeCalculator() {
+    console.log("\n\n-Switch Ranges-");
+
+    let grade = Math.floor(Math.random() * 100);
+    console.log(`Percent = ${grade}%`);
+
+    switch (true) {
+        case grade > 90:
+            grade = 'A';
+            break;
+
+        case grade > 80:
+            grade = 'B';
+            break;
+
+        case grade > 70:
+            grade = 'C';
+            break;
+
+        case grade > 60:
+            grade = 'D';
+            break;
+
+        default:
+            grade = 'F';
+            break;
     }
+
+    console.log(`Grade = ${grade}`);
 }
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

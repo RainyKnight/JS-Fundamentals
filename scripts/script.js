@@ -660,7 +660,31 @@ function monthSeasoning() {
 
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     let currentMonth = months[Math.floor(Math.random() * 12)]; // select a month at random
+    let season;
     console.log(currentMonth);
+
+    switch (currentMonth) {
+        case 'January':
+        case 'February':
+        case 'March':
+            console.log('Winter');
+            break;
+        case 'April':
+        case 'May':
+        case 'June':
+            console.log('Spring');
+            break;
+        case 'July':
+        case 'August':
+        case 'September':
+            console.log('Summer');
+            break;
+        case 'October':
+        case 'November':
+        case 'December':
+            console.log('Winter');
+            break;
+    }
 }
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -1007,6 +1007,29 @@ function ifElseTernaryPractice() {
 }
 
 // --------------------------------------------------
+// String Addition Practice
+// --------------------------------------------------
+
+// uncomment to run the practice
+// stringAdditionPractice();
+
+function stringAdditionPractice() {
+    console.log("\n\n-String Addition Practice-");
+
+    // we want to print the addition of the two variables, not the concatenation
+
+    let a = 1;
+    let b = 1;
+
+
+    // the problem
+    console.log('a' + 'b'); // ab
+
+    // the solution
+    console.log(a + b); // 2
+}
+
+// --------------------------------------------------
 // Best Practice Principles
 // --------------------------------------------------
 

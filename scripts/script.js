@@ -603,7 +603,8 @@ function ifElseStatements() {
 
 // uncomment to run the function below
 // switchStatement();
-gradeCalculator();
+// gradeCalculator();
+monthSeasoning();
 
 function switchStatement() {
     console.log("\n\n-Switch-");
@@ -653,6 +654,13 @@ function gradeCalculator() {
     }
 
     console.log(`Grade = ${grade}`);
+}
+
+function monthSeasoning() {
+
+    let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    let currentMonth = months[Math.floor(Math.random() * 12)]; // select a month at random
+    console.log(currentMonth);
 }
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

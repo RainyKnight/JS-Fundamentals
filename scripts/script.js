@@ -663,6 +663,8 @@ function monthSeasoning() {
     let season;
     console.log(currentMonth);
 
+    // when there are multiple cases, they fall through until the first one with a break;
+    // in this way, you can group cases together
     switch (currentMonth) {
         case 'January':
         case 'February':

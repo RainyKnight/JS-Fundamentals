@@ -157,17 +157,26 @@ function clearElements() {
     hide();
 }
 
+// ------------------------------------------------------------------------------------------------
+// Light and Dark theme JS
+
+// Figure out a way to change button classes with JS and CSS with JS
+
+let theme = 0;
+// let elements = document.getElementsByClassName('btn btn-primary');
+
+function toggleTheme() {
+    darkTheme();
 
 
+    // if (theme) ? lightTheme() : darkTheme();
+}
 
+function darkTheme() {
+    document.html.body.secton.button.querySelectorAll("btn btn-primary").className = 'btn-dark';
+}
 
-
-
-
-
-
-
-
+// NOT CURRENTLY WORKING JUST BRAINSTORMING
 
 // ------------------------------------------------------------------------------------------------
 // The Odin Project js fundamentals Part 1

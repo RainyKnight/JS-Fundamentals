@@ -163,6 +163,7 @@ function clearElements() {
 // Figure out a way to change button classes with JS and CSS with JS
 
 let theme = 0;
+// ternary operator to toggle between dark/light
 // let elements = document.getElementsByClassName('btn btn-primary');
 
 function toggleTheme() {

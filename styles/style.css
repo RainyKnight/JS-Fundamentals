@@ -58,7 +58,3 @@ h1 {
 .hidden {
     visibility: hidden;
 }
-
-label {
-    display: none;
-}
